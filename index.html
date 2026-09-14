@@ -3,83 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohib Qureshi - Student Portfolio</title>
+    <title>Ayesha Asim - Portfolio</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Mohib Qureshi</a>
+    <nav class="navbar-custom">
+        <div class="nav-wrapper">
+            <div class="nav-brand">
+                <span>✨ Ayesha</span>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+            <ul class="nav-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
-    <!-- Hero/Introduction Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Mohib Qureshi</span></h1>
-                <p class="hero-subtitle">Full Stack Developer | Computer Science Student</p>
-                <p class="hero-description">
-                    Passionate about building innovative web applications and solving complex problems 
-                    through elegant code. Currently pursuing a Bachelor's degree in Computer Science.
-                </p>
-                <div class="hero-buttons">
-                    <button class="btn-primary">View My Work</button>
-                    <button class="btn-secondary">Get In Touch</button>
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="gradient-text">Ayesha Asim</span></h1>
+                <p class="subtitle">Creative Developer & Designer</p>
+                <p class="tagline">Building beautiful web experiences with modern technologies</p>
+                <button class="btn-hero">Explore My Work</button>
             </div>
-            <div class="hero-image">
-                <img src="https://i.pravatar.cc/300?img=12" alt="Mohib Qureshi">
+            <div class="hero-image-container">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop" alt="Ayesha Asim" class="hero-img">
+                <div class="floating-card">💻</div>
             </div>
         </div>
     </section>
 
-    <!-- About/Introduction Section -->
-    <section id="about" class="about-section">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container-custom">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content d-flex align-items-center flex-wrap gap-5">
+            <h2 class="section-heading">About Me</h2>
+            <div class="about-grid">
                 <div class="about-image">
-                    <img src="https://i.pravatar.cc/200?img=12" alt="Profile">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" alt="Ayesha">
                 </div>
                 <div class="about-text">
-                    <h3>Mohib Qureshi</h3>
-                    <p class="degree-info">Bachelor of Science in Computer Science</p>
-                    <p class="about-description">
-                        I am a dedicated computer science student with a passion for web development and software engineering. 
-                        With a strong foundation in programming fundamentals and web technologies, I strive to create user-centric 
-                        applications that solve real-world problems. I enjoy collaborating with teams and constantly learning new technologies.
+                    <h3>Ayesha Asim</h3>
+                    <p class="role">Computer Science Student | Full Stack Developer</p>
+                    <p class="description">
+                        I'm passionate about creating intuitive and visually stunning web applications. With expertise in both frontend and backend development, I transform ideas into reality through clean code and creative design. Currently pursuing my degree in Computer Science with a focus on web technologies.
                     </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">6+</span>
-                            <span class="stat-label">Courses Completed</span>
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-text">Projects</span>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Projects Built</span>
+                        <div class="stat-box">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-text">Skills</span>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">3.9</span>
-                            <span class="stat-label">GPA</span>
+                        <div class="stat-box">
+                            <span class="stat-number">3.8</span>
+                            <span class="stat-text">GPA</span>
                         </div>
                     </div>
                 </div>
@@ -87,244 +74,261 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+    <!-- Skills Section - Completely New Design -->
+    <section id="skills" class="skills-new">
         <div class="container-custom">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>Frontend Development</h3>
-                    <ul class="skill-list">
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript & React</li>
-                        <li>Responsive Design</li>
-                        <li>UI/UX Principles</li>
-                    </ul>
+            <h2 class="section-heading">My Expertise</h2>
+            
+            <div class="skills-wrapper">
+                <!-- Skill Category 1 -->
+                <div class="skill-category">
+                    <div class="category-icon">🎨</div>
+                    <h3>Design</h3>
+                    <div class="skills-bars">
+                        <div class="skill-bar-item">
+                            <span>UI/UX Design</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span>Figma</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span>Photoshop</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
-                    <h3>Backend Development</h3>
-                    <ul class="skill-list">
-                        <li>Node.js & Express</li>
-                        <li>Database Design</li>
-                        <li>REST APIs</li>
-                        <li>Authentication</li>
-                    </ul>
+
+                <!-- Skill Category 2 -->
+                <div class="skill-category">
+                    <div class="category-icon">💻</div>
+                    <h3>Frontend</h3>
+                    <div class="skills-bars">
+                        <div class="skill-bar-item">
+                            <span>React & JavaScript</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span>HTML & CSS</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span>Vue.js</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🗄️</div>
-                    <h3>Databases</h3>
-                    <ul class="skill-list">
-                        <li>SQL & MySQL</li>
-                        <li>MongoDB</li>
-                        <li>Query Optimization</li>
-                        <li>Data Modeling</li>
-                    </ul>
+
+                <!-- Skill Category 3 -->
+                <div class="skill-category">
+                    <div class="category-icon">⚙️</div>
+                    <h3>Backend</h3>
+                    <div class="skills-bars">
+                        <div class="skill-bar-item">
+                            <span>Node.js & Express</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span>Databases</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span>APIs & REST</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🧠</div>
-                    <h3>Other Skills</h3>
-                    <ul class="skill-list">
-                        <li>Git & GitHub</li>
-                        <li>Problem Solving</li>
-                        <li>Team Collaboration</li>
-                        <li>Agile Methodology</li>
-                    </ul>
+
+                <!-- Skill Category 4 -->
+                <div class="skill-category">
+                    <div class="category-icon">🛠️</div>
+                    <h3>Tools</h3>
+                    <div class="skills-bars">
+                        <div class="skill-bar-item">
+                            <span>Git & GitHub</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span>VS Code</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span>DevTools</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects">
         <div class="container-custom">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-heading">Featured Work</h2>
             <div class="projects-grid">
-                <!-- Web Development Project -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=250&fit=crop" alt="Web Development">
+                <!-- Project 1 -->
+                <div class="project-tile">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" alt="E-Shop">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Project</button>
+                        </div>
                     </div>
-                    <div class="project-content">
+                    <div class="project-info">
                         <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce website built with React and Node.js featuring user authentication, product management, and secure payment integration.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
+                        <p>A modern shopping platform with seamless checkout experience</p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
                         </div>
-                        <button class="project-btn">View Project</button>
                     </div>
                 </div>
 
-                <!-- Database Project -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="Database">
-                    </div>
-                    <div class="project-content">
-                        <h3>Hospital Management System</h3>
-                        <p>Designed and implemented a complex relational database for hospital operations with optimized queries and comprehensive data integrity constraints.</p>
-                        <div class="project-tags">
-                            <span class="tag">MySQL</span>
-                            <span class="tag">Database Design</span>
-                            <span class="tag">Optimization</span>
+                <!-- Project 2 -->
+                <div class="project-tile">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop" alt="Dashboard">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Project</button>
                         </div>
-                        <button class="project-btn">View Project</button>
+                    </div>
+                    <div class="project-info">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Real-time data visualization and reporting system</p>
+                        <div class="tech-tags">
+                            <span>Vue.js</span>
+                            <span>Chart.js</span>
+                            <span>API</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- AI/ML Project -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1677442d019cecf4d4447515c0c5e38e78849daa?w=400&h=250&fit=crop" alt="AI/ML">
-                    </div>
-                    <div class="project-content">
-                        <h3>Sentiment Analysis Model</h3>
-                        <p>Developed a machine learning model for sentiment analysis using Python and TensorFlow with 92% accuracy on the test dataset.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">ML</span>
+                <!-- Project 3 -->
+                <div class="project-tile">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=400&h=300&fit=crop" alt="Mobile App">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Project</button>
                         </div>
-                        <button class="project-btn">View Project</button>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>Collaborative tool for teams to organize and track work</p>
+                        <div class="tech-tags">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Tailwind</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements-section">
+    <!-- Dashboard Stats Section -->
+    <section class="dashboard-stats">
         <div class="container-custom">
-            <h2 class="section-title">Achievements & Recognition</h2>
-            <div class="achievement-card">
-                <!-- Featured Badge -->
-                <div class="featured-badge">
-                    <span class="badge-text">Featured</span>
+            <h2 class="section-heading">Academic Overview</h2>
+            <div class="stats-grid d-flex justify-content-between align-items-center flex-wrap gap-4">
+                <div class="stat-card">
+                    <div class="stat-icon courses">📚</div>
+                    <h4>Courses</h4>
+                    <p class="stat-value">8</p>
+                    <small>Completed</small>
                 </div>
-
-                <!-- Achievement Content -->
-                <div class="achievement-content">
-                    <h3 class="achievement-name">Mohib Qureshi</h3>
-                    <h4 class="achievement-title">Dean's List Scholar 2024</h4>
-                    <p class="achievement-description">
-                        Recognized for outstanding academic excellence with a GPA of 3.9/4.0. 
-                        This achievement reflects consistent dedication to learning and mastery of computer science fundamentals.
-                        Demonstrated excellence in core programming courses and web development projects.
-                    </p>
-                    <div class="achievement-date">
-                        <span class="date-label">Achieved:</span>
-                        <span class="date-value">May 2024</span>
-                    </div>
+                <div class="stat-card">
+                    <div class="stat-icon assignments">📋</div>
+                    <h4>Projects</h4>
+                    <p class="stat-value">12</p>
+                    <small>Developed</small>
                 </div>
-            </div>
-
-            <!-- Dashboard Section -->
-            <h2 class="section-title section-title-secondary">Academic Dashboard</h2>
-            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 dashboard-container">
-                
-                <!-- Courses Card -->
-                <div class="dashboard-item">
-                    <div class="dashboard-icon courses-icon">
-                        <span>📚</span>
-                    </div>
-                    <div class="dashboard-content">
-                        <h3 class="dashboard-item-title">Courses</h3>
-                        <p class="dashboard-item-value">6</p>
-                        <p class="dashboard-item-subtitle">Active Courses</p>
-                    </div>
+                <div class="stat-card">
+                    <div class="stat-icon achievements">🏆</div>
+                    <h4>Achievements</h4>
+                    <p class="stat-value">7</p>
+                    <small>Earned</small>
                 </div>
-
-                <!-- Assignments Card -->
-                <div class="dashboard-item">
-                    <div class="dashboard-icon assignments-icon">
-                        <span>📝</span>
-                    </div>
-                    <div class="dashboard-content">
-                        <h3 class="dashboard-item-title">Assignments</h3>
-                        <p class="dashboard-item-value">3</p>
-                        <p class="dashboard-item-subtitle">Pending Submissions</p>
-                    </div>
+                <div class="stat-card">
+                    <div class="stat-icon internship">💼</div>
+                    <h4>Experience</h4>
+                    <p class="stat-value">2</p>
+                    <small>Internships</small>
                 </div>
-
-                <!-- Projects Card -->
-                <div class="dashboard-item">
-                    <div class="dashboard-icon projects-icon">
-                        <span>🚀</span>
-                    </div>
-                    <div class="dashboard-content">
-                        <h3 class="dashboard-item-title">Projects</h3>
-                        <p class="dashboard-item-value">5</p>
-                        <p class="dashboard-item-subtitle">Completed Projects</p>
-                    </div>
-                </div>
-
-                <!-- Attendance Card -->
-                <div class="dashboard-item">
-                    <div class="dashboard-icon attendance-icon">
-                        <span>✓</span>
-                    </div>
-                    <div class="dashboard-content">
-                        <h3 class="dashboard-item-title">Attendance</h3>
-                        <p class="dashboard-item-value">92%</p>
-                        <p class="dashboard-item-subtitle">Class Attendance</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer id="contact" class="footer-section">
+    <!-- Achievement Highlight -->
+    <section class="achievement-highlight">
         <div class="container-custom">
-            <div class="footer-content d-flex justify-content-between align-items-start flex-wrap gap-4">
-                <!-- Footer About -->
-                <div class="footer-section-item">
-                    <h3>Mohib Qureshi</h3>
-                    <p>Full Stack Developer & Computer Science Student</p>
-                    <p class="footer-description">
-                        Building innovative web applications and exploring the intersection of technology and design.
-                    </p>
-                </div>
+            <div class="achievement-box">
+                <div class="achievement-icon">🌟</div>
+                <h2>Best Student Award 2024</h2>
+                <p>Recognized for academic excellence and innovative project contributions</p>
+                <span class="achievement-date">May 2024</span>
+            </div>
+        </div>
+    </section>
 
-                <!-- Quick Links -->
-                <div class="footer-section-item">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="footer-section-item">
-                    <h4>Contact</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:mohib@email.com">Email: mohib@email.com</a></li>
-                        <li><a href="#">Phone: +1 (555) 123-4567</a></li>
-                        <li><a href="#">Location: City, Country</a></li>
-                    </ul>
-                </div>
-
-                <!-- Social Links -->
-                <div class="footer-section-item">
-                    <h4>Follow Me</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">GitHub</a>
-                        <a href="#" class="social-link">Twitter</a>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container-custom">
+            <h2 class="section-heading">Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'd love to hear from you. Feel free to reach out!</p>
+                    <div class="contact-items">
+                        <p>📧 ayesha@email.com</p>
+                        <p>📱 +92 300 1234567</p>
+                        <p>📍 Karachi, Pakistan</p>
                     </div>
                 </div>
+                <div class="contact-form">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <button class="send-btn">Send Message</button>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p>&copy; 2024 Mohib Qureshi. All rights reserved. | Built with HTML, CSS, and Bootstrap</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-custom">
+            <p>&copy; 2024 Ayesha Asim. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
             </div>
         </div>
     </footer>

@@ -1,9 +1,9 @@
 // ============================================
-// SMOOTH SCROLL NAVIGATION
+// SMOOTH SCROLLING
 // ============================================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
@@ -16,12 +16,56 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ============================================
-// ACTIVE NAVIGATION LINK
+// BUTTON INTERACTIONS
+// ============================================
+
+document.querySelector('.btn-hero')?.addEventListener('click', function() {
+    document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.querySelectorAll('.view-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const projectName = this.closest('.project-tile').querySelector('h3').textContent;
+        alert(`🎉 Thanks for your interest in "${projectName}"!\n\nProject details coming soon!`);
+    });
+});
+
+document.querySelector('.send-btn')?.addEventListener('click', function() {
+    alert('✅ Message sent! I will get back to you soon.');
+});
+
+// ============================================
+// PROGRESS BAR ANIMATION ON SCROLL
+// ============================================
+
+const progressBars = document.querySelectorAll('.progress-fill');
+
+const observerOptions = {
+    threshold: 0.1
+};
+
+const progressObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const bar = entry.target;
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 100);
+        }
+    });
+}, observerOptions);
+
+progressBars.forEach(bar => progressObserver.observe(bar));
+
+// ============================================
+// ACTIVE NAVIGATION HIGHLIGHTING
 // ============================================
 
 window.addEventListener('scroll', () => {
     let current = '';
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section[id]');
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -30,103 +74,48 @@ window.addEventListener('scroll', () => {
         }
     });
 
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
+    document.querySelectorAll('.nav-items a').forEach(link => {
+        link.style.color = '';
         if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
+            link.style.color = '#ff6b9d';
         }
     });
-});
-
-// ============================================
-// HAMBURGER MENU
-// ============================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
-        });
-    }
 });
 
 // ============================================
 // FADE IN ON SCROLL
 // ============================================
 
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+const fadeInElements = document.querySelectorAll('.skill-category, .project-tile, .stat-card');
 
-const observer = new IntersectionObserver(function(entries) {
+const fadeInObserver = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
+            entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
         }
     });
-}, observerOptions);
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.skill-card, .project-card, .dashboard-item').forEach(el => {
+fadeInElements.forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
+    fadeInObserver.observe(el);
 });
 
-// ============================================
-// PROJECT BUTTONS - ALERT
-// ============================================
-
-document.querySelectorAll('.project-btn').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
-        const projectTitle = this.closest('.project-card').querySelector('h3').textContent;
-        alert(`🚀 Thank you for your interest in "${projectTitle}"!\n\nFull project details coming soon...`);
-    });
-});
-
-// ============================================
-// HERO BUTTONS - ALERTS
-// ============================================
-
-document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
-    if (button.closest('.hero-section')) {
-        button.addEventListener('click', function() {
-            if (this.classList.contains('btn-primary')) {
-                alert('📂 Redirecting to portfolio...');
-            } else {
-                alert('📧 Please contact: mohib@email.com');
-            }
-        });
+// Add animation keyframes
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-});
+`;
+document.head.appendChild(style);
 
-// ============================================
-// NAVBAR BACKGROUND ON SCROLL
-// ============================================
-
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.15)';
-    } else {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    }
-});
-
-console.log('✅ Portfolio loaded successfully!');
+console.log('✨ Ayesha Asim Portfolio Loaded!');
