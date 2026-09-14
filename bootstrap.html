@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stack Development Lab</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Full Stack Lab</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION (Replaced custom hero styling with Bootstrap utility classes) -->
+  <section class="bg-primary bg-gradient text-white text-center py-5">
+    <div class="container py-4">
+      <h1 class="display-4 fw-bold mb-3">Full Stack Web Development</h1>
+      <p class="lead mb-4">Learn HTML5, CSS3, Bootstrap and modern web development technologies.</p>
+      <a href="#courses" class="btn btn-light btn-lg text-primary fw-semibold">Explore Courses</a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION (Replaced .about-box with Bootstrap border & background utilities) -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3">About the Lab</h2>
+          <p>This lab introduces students to the fundamental technologies used in front-end web development.</p>
+          <p>Students will learn how to create structured web pages using HTML5, style them using CSS3 and build responsive interfaces using Bootstrap.</p>
+          <button class="btn btn-success">Learn More</button>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-light p-4 rounded border-start border-primary border-4 shadow-sm">
+            <h3 class="h4 mb-3">Technologies</h3>
+            <ul class="mb-0 ps-3">
+              <li class="mb-2">HTML5</li>
+              <li class="mb-2">CSS3</li>
+              <li class="mb-2">Bootstrap 5</li>
+              <li class="mb-2">Git</li>
+              <li>GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES SECTION -->
+  <section id="courses" class="bg-light py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Web Development Courses</h2>
+        <p class="text-muted">Explore the technologies covered in this lab.</p>
+      </div>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">HTML5</h5>
+              <p class="card-text text-muted flex-grow-1">Learn how to create the structure of modern web pages using HTML5.</p>
+              <a href="#" class="btn btn-primary mt-auto">Learn HTML</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">CSS3</h5>
+              <p class="card-text text-muted flex-grow-1">Learn how to style web pages using CSS3, layouts, colors and typography.</p>
+              <a href="#" class="btn btn-success mt-auto">Learn CSS</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Bootstrap</h5>
+              <p class="card-text text-muted flex-grow-1">Build responsive websites using the Bootstrap grid and components.</p>
+              <a href="#" class="btn btn-warning mt-auto">Learn Bootstrap</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">Contact Us</h2>
+      <p class="text-muted mb-4">Full Stack Web Development Laboratory</p>
+      <button class="btn btn-dark">Contact</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0 small">&copy; 2026 Full Stack Web Development Lab</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2 - Interactive Project Cards</title>
+  
+  <style>
+    /* Global Page Setup */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      min-height: 100vh;
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page-title {
+      font-size: 2rem;
+      margin-bottom: 35px;
+      color: #212529;
+      text-align: center;
+    }
+
+    /* Requirement 1: Flexbox container to arrange the 3 cards */
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* Project Card Styling */
+    .project-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 320px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+
+      /* Requirement 2: Apply a CSS transition */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Requirement 3: Card moves upward (translateY) & scales on mouse hover */
+    .project-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Image Container & Styling */
+    .card-image-wrapper {
+      overflow: hidden;
+      height: 200px;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      /* Requirement 4: Apply CSS filter to project image */
+      filter: grayscale(100%) brightness(90%);
+
+      /* Requirement 2: Transition for smooth filter & zoom effect */
+      transition: filter 0.4s ease, transform 0.4s ease;
+    }
+
+    /* Requirement 5: Remove/change filter when user hovers over the card */
+    .project-card:hover img {
+      filter: grayscale(0%) brightness(100%);
+      transform: scale(1.05);
+    }
+
+    /* Card Content Body */
+    .card-content {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: #212529;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .card-description {
+      font-size: 0.95rem;
+      color: #6c757d;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .card-btn {
+      align-self: flex-start;
+      padding: 10px 20px;
+      background-color: #0d6efd;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+
+    .card-btn:hover {
+      background-color: #0b5ed7;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="page-title">Featured Portfolio Projects</h1>
+
+  <!-- Requirement 1: Flexbox Container -->
+  <div class="projects-container">
+
+    <!-- Card 1: Web Development Project -->
+    <div class="project-card">
+      <div class="card-image-wrapper">
+        <img 
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=500" 
+          alt="Web Development Project"
+        >
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Web Development</h3>
+        <p class="card-description">
+          A responsive web application built with HTML5, CSS3, and JavaScript featuring modern UI component structures.
+        </p>
+        <button class="card-btn">View Project</button>
+      </div>
+    </div>
+
+    <!-- Card 2: Database Project -->
+    <div class="project-card">
+      <div class="card-image-wrapper">
+        <img 
+          src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&q=80&w=500" 
+          alt="Database Project"
+        >
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Database Management</h3>
+        <p class="card-description">
+          A relational SQL database architecture designed with optimized indexing, joins, and data normalization techniques.
+        </p>
+        <button class="card-btn">View Project</button>
+      </div>
+    </div>
+
+    <!-- Card 3: AI/ML Project -->
+    <div class="project-card">
+      <div class="card-image-wrapper">
+        <img 
+          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=500" 
+          alt="AI/ML Project"
+        >
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">AI / ML Model</h3>
+        <p class="card-description">
+          A predictive machine learning model built with Python and Scikit-Learn to perform text analysis and sentiment classification.
+        </p>
+        <button class="card-btn">View Project</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
